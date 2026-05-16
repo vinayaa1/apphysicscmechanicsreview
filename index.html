@@ -63,3 +63,35 @@
     font-size: 15px;
     color: var(--muted);
   }
+
+   nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(14,17,23,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+    padding: 0 2rem;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .nav-inner {
+    display: inline-flex;
+    gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  nav a {
+    display: inline-block;
+    padding: 14px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  nav a:hover { color: var(--text); }
+  nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
