@@ -194,3 +194,31 @@
   }
   .highlight strong { color: var(--accent2); font-weight: 500; }
 
+ ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+</style>
+</head>
+<body>
+ 
+<header>
+  <div class="tag">AP Physics C</div>
+  <h1>mechanics formula sheeet</h1>
+  <p>all the formulas are organized by topic (only main ones included). use the tabs to navigate.</p>
+</header>
+ 
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="#" class="active" onclick="show('kinematics',this);return false;">kinematics</a>
+    <a href="#" onclick="show('dynamics',this);return false;">dynamics</a>
+    <a href="#" onclick="show('work',this);return false;">work &amp; energy</a>
+    <a href="#" onclick="show('momentum',this);return false;">momentum</a>
+    <a href="#" onclick="show('rotation',this);return false;">rotation</a>
+    <a href="#" onclick="show('gravity',this);return false;">gravity</a>
+    <a href="#" onclick="show('oscillations',this);return false;">oscillations</a>
+    <a href="#" onclick="show('vars',this);return false;">variables</a>
+  </div>
+</nav>
+ 
+<main>
+ 
