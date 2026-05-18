@@ -465,3 +465,81 @@
     <strong>Frequency:</strong> f = ω/2π, &nbsp; T = 1/f = 2π/ω.
   </div>
 </div>
+
+<div class="section" id="vars">
+  <h2 class="section-heading">Variable &amp; Constant Reference</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-title">Translational mechanics</div>
+      <div class="var-grid">
+        <div class="var-item"><code>x, y</code> position (m)</div>
+        <div class="var-item"><code>v, v₀</code> velocity (m/s)</div>
+        <div class="var-item"><code>a</code> acceleration (m/s²)</div>
+        <div class="var-item"><code>t</code> time (s)</div>
+        <div class="var-item"><code>m, M</code> mass (kg)</div>
+        <div class="var-item"><code>F</code> force (N)</div>
+        <div class="var-item"><code>N</code> normal force (N)</div>
+        <div class="var-item"><code>f</code> friction force (N)</div>
+        <div class="var-item"><code>μ</code> friction coefficient</div>
+        <div class="var-item"><code>k</code> spring constant (N/m)</div>
+        <div class="var-item"><code>p</code> momentum (kg·m/s)</div>
+        <div class="var-item"><code>J</code> impulse (N·s)</div>
+        <div class="var-item"><code>W</code> work (J)</div>
+        <div class="var-item"><code>KE</code> kinetic energy (J)</div>
+        <div class="var-item"><code>U, PE</code> potential energy (J)</div>
+        <div class="var-item"><code>P</code> power (W)</div>
+        <div class="var-item"><code>r</code> radius (m)</div>
+        <div class="var-item"><code>θ</code> angle (rad or °)</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Rotational &amp; oscillatory</div>
+      <div class="var-grid">
+        <div class="var-item"><code>ω</code> angular velocity (rad/s)</div>
+        <div class="var-item"><code>α</code> angular accel. (rad/s²)</div>
+        <div class="var-item"><code>τ</code> torque (N·m)</div>
+        <div class="var-item"><code>I</code> moment of inertia (kg·m²)</div>
+        <div class="var-item"><code>L</code> angular momentum (kg·m²/s)</div>
+        <div class="var-item"><code>T</code> period (s)</div>
+        <div class="var-item"><code>f</code> frequency (Hz)</div>
+        <div class="var-item"><code>A</code> amplitude (m)</div>
+        <div class="var-item"><code>φ</code> phase constant (rad)</div>
+        <div class="var-item"><code>G</code> grav. constant</div>
+        <div class="var-item"><code>R</code> planet radius (m)</div>
+        <div class="var-item"><code>d</code> pivot distance (m)</div>
+        <div class="var-item"><code>b</code> drag coefficient</div>
+        <div class="var-item"><code>e</code> coefficient of restitution</div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Key Constants</div>
+    <div class="f-row"><span class="f-label">Gravitational constant</span><span class="f-eq">G = 6.674 × 10⁻¹¹ N·m²/kg²</span></div>
+    <div class="f-row"><span class="f-label">g (Earth surface)</span><span class="f-eq">g = 9.8 m/s²  ≈ 10 m/s² (approx.)</span></div>
+    <div class="f-row"><span class="f-label">Mass of Earth</span><span class="f-eq">M_E = 5.97 × 10²⁴ kg</span></div>
+    <div class="f-row"><span class="f-label">Radius of Earth</span><span class="f-eq">R_E = 6.37 × 10⁶ m</span></div>
+    <div class="f-row"><span class="f-label">Mass of Sun</span><span class="f-eq">M_S = 1.99 × 10³⁰ kg</span></div>
+  </div>
+</div>
+ 
+</main>
+ 
+<script>
+  function show(id, el) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    el.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+ 
+  // Highlight active nav on scroll (optional enhancement)
+  window.addEventListener('keydown', e => {
+    const tabs = [...document.querySelectorAll('nav a')];
+    const cur = tabs.findIndex(t => t.classList.contains('active'));
+    if (e.key === 'ArrowRight' && cur < tabs.length - 1) tabs[cur + 1].click();
+    if (e.key === 'ArrowLeft' && cur > 0) tabs[cur - 1].click();
+  });
+</script>
+</body>
+</html>
